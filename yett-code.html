@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mini cat | Yett code</title>
+  </head>
+  <body>
+    <h1>
+        Here's code! Have a simple bug, but u can resolve that! :)
+    </h1>
+
+    <pre class="js" style="background-color: black">
+        <code style="background-color: black; color: white;">
+# list of imports
+import time
+import random
+
+
+def userInput():
+    print('what\'s your name?')
+    name = input('->')
+    print('loading...')
+    print('[          ]')
+    time.sleep(2)
+    print('[||        ]')
+    time.sleep(3)
+    print('[|||||||   ]')
+    time.sleep(5)
+    print('[||||||||||]')
+    print('loaded.')
+    print('How many money do you have?')
+    money = int(input('->'))
+    return money
+
+
+userMoney = userInput()
+
+while True:
+    choose = random.randint(0, 10)
+    if choose < 5:
+        calc = (userMoney / 100) * 10
+        if userMoney > calc:
+            print(f'You lose {calc}, {userMoney - calc} is yout total.')
+            total = userMoney - calc
+        else:
+            print(f'You lose {calc}, {calc - userMoney} is yout total')
+            total = calc - userMoney
+    else:
+        calc = (userMoney / 100) * 75
+        print(f'You win {calc}, {calc + userMoney} is your total.')
+        again = input('want to play again? (Y/N)')
+        total = calc + userMoney
+        userMoney = total
+        if again == 'N':
+            break
+        else:
+            pass
+
+
+        </code>
+    </pre>
+  </body>
+</html>
